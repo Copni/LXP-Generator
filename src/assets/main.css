@@ -1,0 +1,76 @@
+/* Main.css – Styles spécifiques et composants */
+
+/* Header */
+header {
+    background: var(--gradient-1);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* Containers */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+.btn-primary:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: white;
+}
+.btn-accent:hover {
+    filter: brightness(1.1);
+}
+
+/* Sections dégradées */
+.section-gradient-1 {
+    background: var(--gradient-1);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.section-gradient-2 {
+    background: var(--gradient-2);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.section-gradient-3 {
+    background: var(--gradient-3);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}

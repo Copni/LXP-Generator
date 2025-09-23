@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Redoublement L1",
+    "cost": 11750,
+    "multiplier": 1.2,
+    "description": "Aïe, tu retapes ta première année. Au moins tu peux flex sur tes 100 lxp du semestre.",
+    "unlocked": false,
+    "picture": "retape.png"
+  },
+  {
+    "name": "Passage en PEX",
+    "cost": 17100,
+    "multiplier": 3,
+    "description": "Tu viens de encore de foirer tes reliquat mais ce n'est pas grave, tu t'as refait les statuts de l'asso",
+    "unlocked": false,
+    "picture": "dodo.png"
+  },
+  {
+    "name": "Redoublement PEX 1",
+    "cost": 20000,
+    "multiplier": 1.2,
+    "description": "T'es content, tu viens d'obtenir énormément de temps libre !",
+    "unlocked": false,
+    "picture": "retape.png"
+  },
+  {
+    "name": "Retour en PGE",
+    "cost": 3,
+    "multiplier": 3,
+    "description": "Parfait, les assos ET le diplôme d'ingé!",
+    "unlocked": false,
+    "picture": "ing.png"
+  },
+  {
+    "name": "Redoublement L3",
+    "cost": 1.2,
+    "multiplier": 1.2,
+    "description": "C'est pas grave, tout le monde se rappelera de ta liste BDE légendaire",
+    "unlocked": false,
+    "picture": "retape.png"
+  },
+  {
+    "name": "Passage en Doctorat",
+    "cost": 3,
+    "multiplier": 3,
+    "description": "Les seuls chosent qui ne quitteront jamais l'Efrei ? Toi et Soma",
+    "unlocked": false,
+    "picture": "doc.png"
+  }
+]

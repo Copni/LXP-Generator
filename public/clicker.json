@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Fillot",
+    "cost": 50,
+    "clicker": 1,
+    "description": "Il t'as coûté une pinte au pod des parrains, mais maintenant t'as un pôle com",
+    "unlocked": 1,
+    "picture": "fillot.png"
+  },
+  {
+    "name": "Membre Continental",
+    "cost": 200,
+    "clicker": 5,
+    "description": "Le bar de l'école, meilleur endroit pour recruter des fillots",
+    "unlocked": 0,
+    "picture": "conti.png"
+  },
+  {
+    "name": "Membre Bureau Des Arts",
+    "cost": 200,
+    "clicker": 5,
+    "description": "Les artistes de l'école, ils sont un peu space ils te feront le design de ton asso",
+    "unlocked": 0,
+    "picture": "bda.png"
+  },
+  {
+    "name": "Membre Efrei Tir",
+    "cost": 200,
+    "clicker": 5,
+    "description": "Ils ont l'air dangereux mais ils sont sympas",
+    "unlocked": 0,
+    "picture": "tir.png"
+  },
+  {
+  "name": "Membre Efrei Picture Studio",
+  "cost": 200,
+  "clicker": 5,
+  "description": "EPS est partout. Littéralement.",
+  "unlocked": 0,
+  "picture": "eps.png"
+},
+  {
+  "name": "Membre Bureau Des Sports",
+  "cost": 200,
+  "clicker": 5,
+  "description": "Les rares qui font du sport à l'Efrei",
+  "unlocked": 0,
+  "picture": "bds.png"
+},
+  {
+    "name": "Respo com",
+    "cost": 500,
+    "clicker": 50,
+    "description": "Esclave",
+    "unlocked": 0,
+    "picture": "com.png"
+  },
+  {
+    "name": "Respo event",
+    "cost": 500,
+    "clicker": 50,
+    "description": "Toujours prêt pour les rallys culturels",
+    "unlocked": 0,
+    "picture": "fêtard.png"
+  },
+  {
+    "name": "Secrétaire",
+    "cost": 500,
+    "clicker": 50,
+    "description": "Il te fait tes comptes rendus, ça te laisse plus de temps pour le pôle event",
+    "unlocked": 0,
+    "picture": "secrétaire.png"
+  },
+  {
+    "name": "Trésorier",
+    "cost": 500,
+    "clicker": 50,
+    "description": "Pas de tréso, pas de sub",
+    "unlocked": 0,
+    "picture": "tréso.png"
+  },
+  {
+    "name": "Président",
+    "cost": 500,
+    "clicker": 50,
+    "description": "Tu as délégué toutes tes tâches, tu peux maintenant créer une nouvelle asso",
+    "unlocked": 0,
+    "picture": "prez.png"
+  },
+  {
+    "name": "Nouvelle asso",
+    "cost": 500,
+    "clicker": 50,
+    "description": "C'est reparti pour un tour",
+    "unlocked": 0,
+    "picture": "again.png"
+  }
+]
