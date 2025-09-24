@@ -1,14 +1,17 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import {ref, onMounted, computed} from 'vue'
 import Clicker from "@/components/Clicker.vue"
 import Multiplier from "@/components/Multiplier.vue"
 import CircleClicker from "@/components/CircleClicker.vue"
+import Stats from "@/components/Stats.vue"
+import Leaderbord from "@/components/Leaderbord.vue";
+import Presentation from "@/components/Presentation.vue";
 
 const props = defineProps({
   userProgress: {
     type: Object,
     default: () => ({
-      userName: 'New Player',
+      userName: 'Nouveau étudiant',
       score: 10000,
       unlockedClickers: [],
       unlockedMultipliers: []
@@ -122,107 +125,114 @@ const spend = computed(() => {
 </script>
 
 <template>
-  <div id="gameBoard">
-    <div id="greetings">
-      <h1>Bienvenue, {{ props.userProgress.userName }} !</h1>
-      <h1>Total générated = {{ spend + counter }}</h1>
+  <div id="theGreatContainer">
+    <div id="leaderbord">
+      <Presentation></Presentation>
+      <Leaderbord></Leaderbord>
+
     </div>
 
-    <div id="cookiecontenair">
-      <!-- <img class="clickable" src="/caillou.png" alt="cookie.png" @click="increment"/> -->
-      <CircleClicker
-          :validated="counter"
-          :total="20"
-          :generator="generator"
-          @increment="increment"
-      />
-    </div>
+    <div id="gameBoard">
+      <div id="greetings">
+        <h1>Bienvenue, {{ props.userProgress.userName }} !</h1>
+      </div>
 
-    <div id="upgrades">
-      <div class="colomn">
-        <h2>Clickers</h2>
-        <Clicker
-            v-for="(c, index) in clickers"
-            :key="c.name"
-            v-bind="c"
-            :unlocked="unlockedClicker[index]"
-            :userScore="counter.value"
-            @buy="buyClicker"
+      <div id="cookiecontenair">
+        <!-- <img class="clickable" src="/caillou.png" alt="cookie.png" @click="increment"/> -->
+        <CircleClicker
+            :validated="counter"
+            :total="20"
+            :generator="generator"
+            @increment="increment"
         />
       </div>
 
-      <div class="colomn">
-        <h2>Multipliers</h2>
-        <Multiplier
-            v-for="(m, index) in multipliers"
-            :key="m.name"
-            v-bind="m"
-            :unlocked="unlockedMultiplier[index]"
-            :userScore="counter.value"
-            @buy="buyMultiplier"
-        />
+      <div id="upgrades">
+        <div class="colomn">
+          <h2>Clickers</h2>
+          <Clicker
+              v-for="(c, index) in clickers"
+              :key="c.name"
+              v-bind="c"
+              :unlocked="unlockedClicker[index]"
+              :userScore="counter.value"
+              @buy="buyClicker"
+          />
+        </div>
+
+        <div class="colomn">
+          <h2>Multipliers</h2>
+          <Multiplier
+              v-for="(m, index) in multipliers"
+              :key="m.name"
+              v-bind="m"
+              :unlocked="unlockedMultiplier[index]"
+              :userScore="counter.value"
+              @buy="buyMultiplier"
+          />
+        </div>
       </div>
+
+
     </div>
+
+    <div id="stats">
+      <Stats :score="counter" :spend="spend" :userName="props.userProgress.userName"
+             :unlockedClickers="unlockedClicker" :unlockedMultipliers="unlockedMultiplier" :clickers="clickers"
+             :multipliers="multipliers"></Stats>
+    </div>
+
+
   </div>
+
+
 </template>
 
 
 <style scoped>
+#theGreatContainer {
+  font-family: "Trebuchet MS", sans-serif;
+  color: #1d2f50;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Aligne les items en haut */
+  gap: 20px; /* espace entre les colonnes */
+  width: 100%;
+}
+
+/* Colonnes avec largeur proportionnelle */
 #gameBoard {
-  font-family: "Trebuchet MS", sans-serif;
-  color: #1d2f50; /* bleu foncé */
-}
-
-#greetings {
-  text-align: center;
-  font-family: "Trebuchet MS", sans-serif;
-  color: #1d2f50; /* bleu foncé */
-  text-shadow: none;
-  margin-bottom: 20px;
-}
-
-#cookiecontenair {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-}
-
-img {
-  width: 280px;
-  height: auto;
-}
-
-.clickable {
-  transition: transform 0.1s ease;
-  cursor: pointer;
-}
-
-.clickable:active {
-  transform: scale(0.9);
-}
-
-#upgrades {
-  display: flex;
-  gap: 16px;
-  justify-content: space-evenly;
-  max-width: 1200px;
-  margin-top: 40px;
-}
-
-.column > * {
   flex: 1;
-}
-
-#gameBoard {
+  max-width: 50%;
   display: flex;
-  border: 4px solid #1d2f50; /* bleu foncé */
-  background: #f5f7fa; /* gris clair */
-  margin: auto;
-  padding: 20px;
-  max-width: 1300px;
   flex-direction: column;
   align-items: center;
+  border: 4px solid #1d2f50;
+  background: #f5f7fa;
+  padding: 20px;
   border-radius: 12px;
 }
+
+#leaderbord {
+  flex: 1; /* 50% de l'espace */
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #1d2f50;
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#stats {
+  flex: 1; /* 25% de l'espace */
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #1d2f50;
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
 </style>
