@@ -1,4 +1,6 @@
-# cookiecliker
+# LXP Generator
+
+A cookie-cliquer-like game made for a Vue.js lab during my studies.
 
 This template should help get you started developing with Vue 3 in Vite.
 
